@@ -81,5 +81,3 @@ You can play the game live here:
 This project is licensed under the MIT License.
 
 ---
-
-Feel free to customize this README further to match any additional features or changes in your project.
