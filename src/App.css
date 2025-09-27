@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+body{
+  overflow-y: hidden;
+}
+.App{
+  
+  font-family:'Poppins',sans-serif;
+  min-height:100vh;
+  /* background:linear-gradient(135deg,#ffecd2,#ff9977); */
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  color:#333;
+  /* transition:background 0.5s; */
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden; */
+  /* overflow: hidden !important; */
+
+  background-image: url('https://static.vecteezy.com/system/resources/previews/001/879/980/non_2x/playful-tic-tac-toe-free-vector.jpg');
+  background-size: cover;   /* cover the entire screen */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1{
+  font-size:2.5rem;
+  margin-bottom:10px;
+  color:#fc03df;
+  text-shadow:2px 2px 6px rgba(0,0,0,0.2);
+}
+
+h2{
+  color: rgb(255, 227, 174);
+}
+
+.round-score{
+  font-size:1.2rem;
+  margin-bottom:15px;
+  color:#c2fd00;
+}
+
+/* Board */
+.board-wrapper{
+  position:relative;
+  display:inline-block;
+}
+
+.board-wrapper.blur .board{
+  filter:blur(5px);
+}
+
+.board{
+  display:grid;
+  grid-template-columns:repeat(3,120px);
+  grid-template-rows:repeat(3,120px);
+  gap:10px;
+}
+
+.square{
+  width:120px;
+  height:120px;
+  font-size:3rem;
+  font-weight:bold;
+  cursor:pointer;
+  border-radius:15px;
+  background:linear-gradient(145deg,#ffffff,#e6e6e6);
+  border:2px solid #333;
+  box-shadow:3px 3px 10px rgba(0,0,0,0.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:all 0.3s ease;
+}
+
+.square:hover{
+  transform:scale(1.05);
+  background:#e0f7fa;
+}
+
+.square.X{ color:#cf0015; }
+.square.O{ color:#0080ff; }
+
+/* Overlay for round winner */
+.overlay{
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,0.85);
+  font-size:2rem;
+  font-weight:700;
+  border-radius:15px;
+  color:#333;
+  animation:fadein 0.5s ease;
+}
+
+.overlay.final{
+  display: flex;
+  flex-direction: column;
+  position:fixed;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-size:2rem;
+  background:rgba(255,255,255,0.95);
+  padding:20px 40px;
+  border-radius:20px;
+  text-align:center;
+}
+
+/* Restart button */
+.restart-btn{
+  margin-top:15px;
+  padding:10px 20px;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(45deg,#ff6a00,#ee0979);
+  color:#fff;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  transition:all 0.3s ease;
+}
+
+.restart-btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Confetti */
+.confetti{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.confetti-piece{
+  position:absolute;
+  width:10px;
+  height:10px;
+  background:hsl(calc(360*var(--i)),80%,60%);
+  top:-10px;
+  left:calc(100%*var(--i));
+  animation:fall 2s linear infinite;
+  border-radius:50%;
+}
+
+@keyframes fall{
+  0%{transform:translateY(0) rotate(0deg); opacity:1;}
+  100%{transform:translateY(100vh) rotate(360deg); opacity:0;}
+}
+
+@keyframes fadein{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevents page scroll */
+}
+  .board {
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+    gap: 8px;
+  }
+
+  .square {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .round-info {
+    font-size: 1.2rem;
+  }
+
+  .round-score {
+    font-size: 1rem;
+  }
+
+  .overlay {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+  }
+
+  .restart-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
