@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# 🎮 Tic-Tac-Toe Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A classic Tic-Tac-Toe game built with React, featuring a colorful design and engaging gameplay.
 
-## Available Scripts
+<img width="1919" height="913" alt="Screenshot 2025-09-27 172803" src="https://github.com/user-attachments/assets/c5ceb15d-34e3-4e27-9294-49b498d192c3" />
 
-In the project directory, you can run:
+## 📌 Features
 
-### `npm start`
+* **Interactive Gameplay**: Play as 'X' against an AI opponent using 'O'.
+* **Round-based Scoring**: Track wins and draws across multiple rounds.
+* **Responsive Design**: Optimized for both desktop and mobile devices.
+* **Colorful UI**: Engaging visuals to enhance the gaming experience.
+* **Confetti Animation**: Celebrate victories with festive animations.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+Ensure you have the following installed:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [Node.js](https://nodejs.org/) (version 14 or higher)
+* [npm](https://www.npmjs.com/) (Node package manager)
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/monalsutar/TicTacToe-Game.git
+cd TicTacToe-Game
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install dependencies:
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Running the Game Locally
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Open your browser and navigate to:
 
-## Learn More
+```
+http://localhost:3000
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Building for Production
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To create an optimized production build:
 
-### Code Splitting
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The build output will be in the `build/` directory, ready for deployment.
 
-### Analyzing the Bundle Size
+## 📱 Mobile Responsiveness
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The game interface is designed to be fully responsive, providing an optimal experience on both desktop and mobile devices.
 
-### Making a Progressive Web App
+## 🌐 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+You can play the game live here:
 
-### Advanced Configuration
+👉 [https://tic-tac-toe-game.onrender.com](https://tic-tac-toe-game.onrender.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🛠️ Technologies Used
 
-### Deployment
+* **Frontend**: React.js
+* **Styling**: CSS
+* **Deployment**: Render
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📄 License
 
-### `npm run build` fails to minify
+This project is licensed under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+Feel free to customize this README further to match any additional features or changes in your project.
